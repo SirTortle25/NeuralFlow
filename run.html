@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>NeuralFlow</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to right, #007bff, #00acee);
+      color: #fff;
+      justify-content: center;
+      flex-direction: column;
+    }
+    tr{
+        justify-content: space-around;
+    }
+    table {
+      border-collapse: collapse;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    table, th, td {
+      border: none;
+    }
+
+    th {
+      font-size: 1.2rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    td {
+      padding: 1rem;
+    }
+
+    .form-container {
+      padding: 2rem;
+    }
+
+    .form-container h2 {
+      margin-bottom: 1rem;
+    }
+
+    .form-container form {
+      margin-bottom: 1rem;
+    }
+
+    .accuracy-container {
+      padding: 2rem;
+    }
+
+    .accuracy-container h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    .accuracy-container h3 {
+      margin-top: 0;
+    }
+
+    .button {
+      background-color: #fff;
+      color: #007bff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00acee;
+      color: #fff;
+    }
+    h1{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+    <h1>Title here</h1>
+  <table>
+    <tr>
+      <td class="form-container">
+        <button class="button">Run</button>
+      </td>
+      <td class="accuracy-container">
+        <h2>Accuracy</h2>
+        <h3>{{acc}}</h3>
+        <button class="button">Download Model</button>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

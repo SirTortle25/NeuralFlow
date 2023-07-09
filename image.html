@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom Model Training</title>
+</head>
+<body>
+    <h1>Custom Model Training</h1>
+    <form action="/train_model" method="POST">
+        <label for="model_architecture">Model Architecture:</label><br>
+
+        <div id="layers-container">
+            <div class="layer">
+                <label for="layer1">Layer 1:</label>
+                <select name="layer1" id="layer1">
+                    <option value="Conv2D">Conv2D</option>
+                    <option value="MaxPooling2D">MaxPooling2D</option>
+                    <option value="Flatten">Flatten</option>
+                    <option value="Dense">Dense</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="button" onclick="addLayer()">Add Layer</button><br><br>
+        <input type="submit" value="Train Model">
+    </form>
+
+    <script>
+        let layerCount = 1;
+
+        function addLayer() {
+            layerCount++;
+
+            const layerContainer = document.getElementById('layers-container');
+
+            const newLayerDiv = document.createElement('div');
+            newLayerDiv.classList.add('layer');
+
+            const newLayerLabel = document.createElement('label');
+            newLayerLabel.htmlFor = 'layer' + layerCount;
+            newLayerLabel.textContent = 'Layer ' + layerCount + ':';
+
+            const newLayerSelect = document.createElement('select');
+            newLayerSelect.name = 'layer' + layerCount;
+            newLayerSelect.id = 'layer' + layerCount;
+            newLayerSelect.innerHTML = `
+                <option value="Conv2D">Conv2D</option>
+                <option value="MaxPooling2D">MaxPooling2D</option>
+                <option value="Flatten">Flatten</option>
+                <option value="Dense">Dense</option>
+            `;
+
+            newLayerDiv.appendChild(newLayerLabel);
+            newLayerDiv.appendChild(newLayerSelect);
+
+            layerContainer.appendChild(newLayerDiv);
+        }
+    </script>
+</body>
+</html>
+
+
