@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Training Page - Gene Netics</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-image: linear-gradient(to right, #007bff, #00acee);
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .network {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+    }
+
+    .node {
+      margin-right: 1rem;
+    }
+
+    .node circle {
+      background-color: #fff;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .line {
+      stroke: #fff;
+      stroke-width: 2px;
+    }
+
+    .run-button {
+      background-color: #fff;
+      color: #007bff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .run-button:hover {
+      background-color: #00acee;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <svg class="network" id="network" width="600" height="400">
+      <g>
+        <!-- First row -->
+        <g class="row">
+          <g class="node">
+            <circle cx="50" cy="50" r="25"></circle>
+          </g>
+        </g>
+      </g>
+      <g>
+        <!-- Second row -->
+        <g class="row">
+          <g class="node">
+            <circle cx="125" cy="100" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="225" cy="100" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="325" cy="100" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="425" cy="100" r="25"></circle>
+          </g>
+        </g>
+      </g>
+      <g>
+        <!-- Third row -->
+        <g class="row">
+          <g class="node">
+            <circle cx="100" cy="200" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="200" cy="200" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="300" cy="200" r="25"></circle>
+          </g>
+          <g class="node">
+            <circle cx="400" cy="200" r="25"></circle>
+          </g>
+        </g>
+      </g>
+      <g>
+        <!-- Fourth row -->
+        <g class="row">
+          <g class="node">
+            <circle cx="200" cy="300" r="25"></circle>
+          </g>
+        </g>
+      </g>
+
+      <!-- SVG lines -->
+      <line class="line" x1="50" y1="50" x2="125" y2="100" />
+      <line class="line" x1="50" y1="50" x2="225" y2="100" />
+      <line class="line" x1="50" y1="50" x2="325" y2="100" />
+      <line class="line" x1="50" y1="50" x2="425" y2="100" />
+
+      <line class="line" x1="125" y1="100" x2="100" y2="200" />
+      <line class="line" x1="125" y1="100" x2="200" y2="200" />
+      <line class="line" x1="125" y1="100" x2="300" y2="200" />
+      <line class="line" x1="125" y1="100" x2="400" y2="200" />
+
+      <line class="line" x1="225" y1="100" x2="100" y2="200" />
+      <line class="line" x1="225" y1="100" x2="200" y2="200" />
+      <line class="line" x1="225" y1="100" x2="300" y2="200" />
+      <line class="line" x1="225" y1="100" x2="400" y2="200" />
+
+      <line class="line" x1="325" y1="100" x2="100" y2="200" />
+      <line class="line" x1="325" y1="100" x2="200" y2="200" />
+      <line class="line" x1="325" y1="100" x2="300" y2="200" />
+      <line class="line" x1="325" y1="100" x2="400" y2="200" />
+
+      <line class="line" x1="425" y1="100" x2="100" y2="200" />
+      <line class="line" x1="425" y1="100" x2="200" y2="200" />
+      <line class="line" x1="425" y1="100" x2="300" y2="200" />
+      <line class="line" x1="425" y1="100" x2="400" y2="200" />
+
+      <line class="line" x1="100" y1="200" x2="200" y2="300" />
+      <line class="line" x1="200" y1="200" x2="200" y2="300" />
+    </svg>
+  </div>
+</body>
+</html>
